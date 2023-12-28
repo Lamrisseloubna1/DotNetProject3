@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Tp1ADO" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-2RA9EQ3\SQLEXPRESS;Initial Catalog=Tp1ADO;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="DotNetProject3.Properties.Settings" SettingsPropertyName="Tp1ADOConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Filiere" Member="Filiere">
+    <Type Name="Filiere">
+      <Column Name="Id_filiere" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nom_filiere" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Filiere_Etudiant" Member="Etudiant" ThisKey="Id_filiere" OtherKey="Id_filiere" Type="Etudiant" />
+    </Type>
+  </Table>
+  <Table Name="dbo.login" Member="login">
+    <Type Name="login">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Etudiant" Member="Etudiant">
+    <Type Name="Etudiant">
+      <Column Name="Cne" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sexe" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Date_Naissance" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_filiere" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Filiere_Etudiant" Member="Filiere" ThisKey="Id_filiere" OtherKey="Id_filiere" Type="Filiere" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
