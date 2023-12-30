@@ -20,7 +20,7 @@ namespace DotNetProject3
     /// </summary>
     public partial class LoginWindow : Window
     {
-        private string ConnectionString = "Data Source = DESKTOP-T3VF1P2\\SQLEXPRESS; Initial Catalog =Etudiant; Integrated Security = true";
+        private string ConnectionString = "Data Source =DESKTOP-EREHUMV\\SQLEXPRESS; Initial Catalog =gestion_etudiant; Integrated Security = true";
 
 
         public LoginWindow()

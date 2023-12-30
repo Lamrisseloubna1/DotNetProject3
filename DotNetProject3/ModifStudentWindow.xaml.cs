@@ -90,7 +90,7 @@ namespace DotNetProject3
         }
         private void SauvegarderModifications()
         {
-            string connectionString = "Data Source = DESKTOP-T3VF1P2\\SQLEXPRESS; Initial Catalog =Etudiant; Integrated Security = true";
+            string connectionString = "Data Source =DESKTOP-EREHUMV\\SQLEXPRESS; Initial Catalog =gestion_etudiant; Integrated Security = true";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();

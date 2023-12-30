@@ -39,7 +39,7 @@ namespace DotNetProject3
         {
             List<string> filiereList = new List<string>();
 
-            using (SqlConnection connection = new SqlConnection("Data Source = DESKTOP-T3VF1P2\\SQLEXPRESS; Initial Catalog =Etudiant; Integrated Security = true"))
+            using (SqlConnection connection = new SqlConnection("Data Source = DESKTOP-EREHUMV\\SQLEXPRESS; Initial Catalog =gestion_etudiant; Integrated Security = true"))
             {
                 connection.Open();
 
@@ -79,7 +79,7 @@ namespace DotNetProject3
 
                 string filiere = ComboBox1.SelectedItem as string;
 
-                using (SqlConnection connection = new SqlConnection("Data Source = DESKTOP-T3VF1P2\\SQLEXPRESS; Initial Catalog =Etudiant; Integrated Security = true"))
+                using (SqlConnection connection = new SqlConnection("Data Source = DESKTOP-EREHUMV\\SQLEXPRESS; Initial Catalog =gestion_etudiant; Integrated Security = true"))
                 {
                     connection.Open();
 
