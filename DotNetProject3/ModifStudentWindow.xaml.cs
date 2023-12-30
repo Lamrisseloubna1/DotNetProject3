@@ -111,6 +111,7 @@ namespace DotNetProject3
                     command.Parameters.AddWithValue("@Telephone", textBox8.Text);
                     command.Parameters.AddWithValue("@Niveau", textBox9.Text);
                     command.ExecuteNonQuery();
+                    MessageBox.Show("Modifié avec succès!");
                 }
 
             }
@@ -131,8 +132,7 @@ namespace DotNetProject3
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            SauvegarderModifications();
-
+          SauvegarderModifications();
         }
     }
 }
