@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace DotNetProject3
 {
-    /// <summary>
-    /// Logique d'interaction pour ModifStudentWindow.xaml
-    /// </summary>
     public partial class ModifStudentWindow : Window
     {
 

@@ -13,12 +13,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Telerik.Windows.Controls;
 
 namespace DotNetProject3
 {
-    /// <summary>
-    /// Logique d'interaction pour StudentWindow.xaml
-    /// </summary>
     public partial class StudentWindow : Window
     {
         string codeMassar;

@@ -1,19 +1,15 @@
 ﻿<Window x:Class="DotNetProject3.ModifStudentWindow"
-        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:local="clr-namespace:DotNetProject3"
         mc:Ignorable="d"
         Title="ModifStudentWindow" Height="450" Width="800">
     <Grid Background="#FF625555">
 
-        <telerik:RadDataForm 
-            Name="RadDataForm1" 
-            Margin="130,47,130,46"
-            AutoGenerateFields="True"
-            CommandButtonsVisibility="All"
+        <telerik:RadDataForm Name="RadDataForm1" Margin="130,47,130,46" AutoGenerateFields="True" CommandButtonsVisibility="All"
             AutoCommit="True"
             AutoEdit="True"
             Loaded="OnRadDataFormLoaded"/>
