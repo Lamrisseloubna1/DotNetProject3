@@ -16,7 +16,7 @@
             <RowDefinition Height="327*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Margin="108,22,99,302" Background="#FFF0DADA">
-            <Button HorizontalAlignment="Left" Margin="39,0,0,0" VerticalAlignment="Center" Width="125" Height="35" BorderBrush="#FFC29797" Foreground="#FF1C0606" OpacityMask="#FF943F3F" Content="Gestion des Etudiants" FontWeight="Bold" >
+            <Button HorizontalAlignment="Left" Margin="39,0,0,0" VerticalAlignment="Center" Width="125" Height="35" BorderBrush="#FFC29797" Foreground="#FF1C0606" OpacityMask="#FF943F3F" Content="Gestion des Etudiants" FontWeight="Bold" Click="Button_Click_1" >
                 <Button.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFC8B2B2" Offset="0.253"/>
@@ -31,7 +31,7 @@
                     <Style/>
                 </Button.Style>
             </Button>
-            <Button Content="Gestion des Filières" HorizontalAlignment="Left" Margin="254,0,0,0" VerticalAlignment="Center" Width="137" Height="35" OpacityMask="Black">
+            <Button Content="Gestion des Filières" HorizontalAlignment="Left" Margin="254,0,0,0" VerticalAlignment="Center" Width="137" Height="35" OpacityMask="Black" Click="Button_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFD4C6C6"/>

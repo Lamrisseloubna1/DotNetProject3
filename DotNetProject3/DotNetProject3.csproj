@@ -166,6 +166,14 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\12.jpg" />
+    <Resource Include="Images\5.jpg" />
+    <Resource Include="Images\6.jpg" />
+    <Resource Include="Images\7.jpg" />
+    <Resource Include="Images\8.jpg" />
+    <Resource Include="Images\9.jpg" />
+    <Resource Include="Images\10.jpg" />
+    <Resource Include="Images\11.jpg" />
     <Resource Include="Images\1.jpg" />
     <Content Include="Images\2.jfif" />
     <Content Include="Images\3.jfif" />

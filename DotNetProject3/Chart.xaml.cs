@@ -21,13 +21,13 @@ namespace DotNetProject3
 
         private void FillChart()
         {
-            string connectionString = "Data Source=DESKTOP-2RA9EQ3\\SQLEXPRESS;Initial Catalog=Tp1ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            string connectionString = "Data Source=DESKTOP-EREHUMV\\SQLEXPRESS;Initial Catalog=gestion_etudiant;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                string query = "SELECT F.Nom_filiere, COUNT(E.Cne) AS NombreEtudiants FROM Etudiant E INNER JOIN Filiere F ON E.Id_filiere = F.Id_filiere GROUP BY F.Nom_filiere";
+                string query = "SELECT F.Nom_filiere, COUNT(E.Cne) AS NombreEtudiants FROM etudiant E INNER JOIN Filiere F ON E.Id_fil = F.Id_filiere GROUP BY F.Nom_filiere";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -45,6 +45,20 @@ namespace DotNetProject3
                     }
                 }
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FiliereWindow w= new FiliereWindow();
+            this.Close();
+            w.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            StudentWindow w = new StudentWindow();
+            this.Close();
+            w.Show();
         }
     }
 

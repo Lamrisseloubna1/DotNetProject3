@@ -114,7 +114,7 @@ namespace DotNetProject3
                         {
                             string imagePath = row["ImagePath"].ToString();
 
-                            row["Photo"] = new BitmapImage(new Uri($"C:/Users/hp/source/repos/DotNetProjectVF/DotNetProject3/{imagePath}"));
+                            row["Photo"] = new BitmapImage(new Uri($"C:/Users/hp/source/repos/DotNetProjectVF/DotNetProject3/Images/{imagePath}"));
 
 
                         }
