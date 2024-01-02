@@ -185,20 +185,20 @@ namespace DotNetProject3
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
 
-            /*FiliereWindow filiere = new FiliereWindow();
-                            this.Hide();
-                            filiere.ShowDialog();
-                            this.Close();*/
+            FiliereWindow filiere = new FiliereWindow();
+            this.Hide();
+            filiere.ShowDialog();
+            this.Close();
 
         }
 
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
 
-            /*StatisticWindow w = new StatisticWindow();
-                                    this.Hide();
-                                    w.ShowDialog();
-                                    this.Close();*/
+            Chart w = new Chart();
+            this.Hide();
+            w.ShowDialog();
+            this.Close();
 
         }
     }

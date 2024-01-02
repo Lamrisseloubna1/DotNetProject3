@@ -44,7 +44,7 @@ namespace DotNetProject3
 
             // Utilisez votre propre logique pour récupérer les données de la table Filiere
             // Exemple simplifié :
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2RA9EQ3\\SQLEXPRESS;Initial Catalog=Tp1ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-EREHUMV\\SQLEXPRESS; Initial Catalog =gestion_etudiant;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
             SqlCommand cmd = new SqlCommand("SELECT Id_filiere, Nom_filiere FROM Filiere", con);
 
             con.Open();
@@ -67,7 +67,7 @@ namespace DotNetProject3
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2RA9EQ3\\SQLEXPRESS;Initial Catalog=Tp1ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-EREHUMV\\SQLEXPRESS; Initial Catalog =gestion_etudiant;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
             SqlCommand cmd;
             SqlDataAdapter adapt;
 
@@ -108,7 +108,7 @@ namespace DotNetProject3
                     {
                         if (int.TryParse(idToUpdate, out int id))
                         {
-                            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2RA9EQ3\\SQLEXPRESS;Initial Catalog=Tp1ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+                            SqlConnection con = new SqlConnection("Data Source=DESKTOP-EREHUMV\\SQLEXPRESS; Initial Catalog =gestion_etudiant;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
                             SqlCommand cmd;
 
                             con.Open();
@@ -155,7 +155,7 @@ namespace DotNetProject3
                     int idToDelete;
                     if (int.TryParse(selectedFiliere.Id_filiere, out idToDelete))
                     {
-                        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2RA9EQ3\\SQLEXPRESS;Initial Catalog=Tp1ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+                        SqlConnection con = new SqlConnection("Data Source=DESKTOP-EREHUMV\\SQLEXPRESS; Initial Catalog =gestion_etudiant;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
                         SqlCommand cmd;
 
                         con.Open();
