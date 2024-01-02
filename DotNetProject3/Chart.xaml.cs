@@ -1,54 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace DotNetProject3
 {
-    /// <summary>
-    /// Logique d'interaction pour Chart.xaml
-    /// </summary>
     public partial class Chart : Window
     {
+        public ObservableCollection<ChartDataModel> ChartData { get; } = new ObservableCollection<ChartDataModel>();
+
         public Chart()
         {
             InitializeComponent();
-            LoadChartData();
+            DataContext = this;
+            FillChart();
         }
-        private void LoadChartData()
-        {
-            using (var context = new DataClasses1DataContext())
-            {
-                try
-                {
-                    // Récupération des données depuis la base de données
-                    var data = (from etudiant in context.Etudiant
-                                group etudiant by etudiant.Id_filiere into g
-                                select new
-                                {
-                                    NomFiliere = g.Key,
-                                    NombreEtudiants = g.Count()
-                                }).ToList();
 
-                    // Définition du contexte de données pour le graphique
-                    DataContext = data;
-                }
-                catch (Exception ex)
+        private void FillChart()
+        {
+            string connectionString = "Data Source=DESKTOP-2RA9EQ3\\SQLEXPRESS;Initial Catalog=Tp1ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT F.Nom_filiere, COUNT(E.Cne) AS NombreEtudiants FROM Etudiant E INNER JOIN Filiere F ON E.Id_filiere = F.Id_filiere GROUP BY F.Nom_filiere";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    MessageBox.Show("Erreur : " + ex.Message);
-                    // Gérer l'exception en fonction de la logique de votre application
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        ChartData.Add(new ChartDataModel
+                        {
+                            Nom_filiere = row["Nom_filiere"].ToString(),
+                            NombreEtudiants = Convert.ToInt32(row["NombreEtudiants"])
+                        });
+                    }
                 }
             }
         }
     }
+
 }

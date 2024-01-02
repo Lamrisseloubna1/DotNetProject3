@@ -3,18 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DotNetProject3" xmlns:chart="http://schemas.syncfusion.com/wpf" 
-        d:DataContext="{d:DesignInstance Type=local:Filiere}"
-        mc:Ignorable="d"
-        Title="Chart" Height="450" Width="800">
+        xmlns:local="clr-namespace:DotNetProject3"
+        xmlns:chart="http://schemas.syncfusion.com/wpf"
+        
+     
+        Title="Chart" Height="500" Width="840" x:Name="chartWindow">
+
     <Grid Background="#FF625555" Margin="-29,-22,0,-483">
         <Grid.RowDefinitions>
             <RowDefinition Height="388*"/>
-            <RowDefinition Height="202*"/>
+            <RowDefinition Height="300*"/>
             <RowDefinition Height="327*"/>
         </Grid.RowDefinitions>
-        <Grid Margin="88,22,99,284" Background="#FFF0DADA">
-            <Button HorizontalAlignment="Left" Margin="39,0,0,0"  VerticalAlignment="Center" Width="125" Height="35" BorderBrush="#FFC29797" Foreground="#FF1C0606" OpacityMask="#FF943F3F" Content="Gestion des Etudiants" FontWeight="Bold" >
+        <Grid Grid.Row="0" Margin="108,22,99,302" Background="#FFF0DADA">
+            <Button HorizontalAlignment="Left" Margin="39,0,0,0" VerticalAlignment="Center" Width="125" Height="35" BorderBrush="#FFC29797" Foreground="#FF1C0606" OpacityMask="#FF943F3F" Content="Gestion des Etudiants" FontWeight="Bold" >
                 <Button.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFC8B2B2" Offset="0.253"/>
@@ -53,18 +55,22 @@
                 </Button.Style>
             </Button>
         </Grid>
+        <chart:SfChart3D HorizontalAlignment="Left" Margin="55,100,10,10" VerticalAlignment="Top" Height="371" Grid.RowSpan="2">
+            <chart:SfChart3D.RenderTransform>
+                <MatrixTransform/>
+            </chart:SfChart3D.RenderTransform>
+            <!--PrimaryAxis-->
+            <chart:SfChart3D.PrimaryAxis>
+                <chart:CategoryAxis3D Header="Filière" LabelPlacement="BetweenTicks"/>
+            </chart:SfChart3D.PrimaryAxis>
+            <!--SecondaryAxis-->
+            <chart:SfChart3D.SecondaryAxis>
+                <chart:NumericalAxis3D Header="Nombre déléments"/>
+            </chart:SfChart3D.SecondaryAxis>
+            <!--ChartSeries-->
+            <chart:ColumnSeries3D ItemsSource="{Binding ChartData}" XBindingPath="Nom_filiere" YBindingPath="NombreEtudiants"/>
 
-        <chart:SfChart Margin="5,-6,-5,6">
-            <chart:SfChart.PrimaryAxis>
-                <chart:CategoryAxis Header="Filière" Interval="1"/>
-            </chart:SfChart.PrimaryAxis>
-            <chart:SfChart.SecondaryAxis>
-                <chart:NumericalAxis Header="Nombre d'étudiants"/>
-            </chart:SfChart.SecondaryAxis>
-            <chart:ColumnSeries ItemsSource="{Binding}" XBindingPath="NomFiliere" YBindingPath="NombreEtudiants" Margin="7,244,15,-151"/>
-        </chart:SfChart>
 
+        </chart:SfChart3D>
     </Grid>
-
-
 </Window>
