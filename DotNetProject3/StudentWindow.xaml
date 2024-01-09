@@ -6,26 +6,26 @@
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:local="clr-namespace:DotNetProject3"
         mc:Ignorable="d"
-        Title="StudentWindow" Height="450" Width="800">
+        Title="StudentWindow" Height="663" Width="800">
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" Height="1156" VerticalAlignment="Top">
 
         <Grid Background="#FF625555">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100*"/>
-                <ColumnDefinition Width="50*"/>
-                <ColumnDefinition Width="750*"/>
+                <ColumnDefinition Width="36*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="119*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="143*"/>
-                <RowDefinition Height="705*"/>
+                <RowDefinition Height="58*"/>
+                <RowDefinition Height="509*"/>
             </Grid.RowDefinitions>
             <Grid Margin="88,22,99,35" Background="#FFF0DADA" Grid.ColumnSpan="3">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="11*"/>
-                    <ColumnDefinition Width="215*"/>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="Button1" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Center" Width="125" Height="35" BorderBrush="#FFC29797" Foreground="#FF1C0606" OpacityMask="#FF943F3F" Content="Gestion des Etudiants" FontWeight="Bold" Grid.Column="1" Click="Button1_Click_1">
+                <Button x:Name="Button1" Margin="6,30,0,25" BorderBrush="#FFC29797" Foreground="#FF1C0606" OpacityMask="#FF943F3F" Content="Gestion des Etudiants" FontWeight="Bold" Grid.Column="1" Click="Button1_Click_1" HorizontalAlignment="Left" Width="126">
                     <Button.Background>
                         <RadialGradientBrush>
                             <GradientStop Color="#FFC8B2B2" Offset="0.253"/>
@@ -40,7 +40,7 @@
                         <Style/>
                     </Button.Style>
                 </Button>
-                <Button x:Name="Button2" Content="Gestion des Filières" HorizontalAlignment="Left" Margin="221,0,0,0" VerticalAlignment="Center" Width="137" Height="35" OpacityMask="Black" Grid.Column="1" Click="Button2_Click">
+                <Button x:Name="Button2" Content="Gestion des Filières" Margin="223,30,223,25" OpacityMask="Black" Grid.Column="1" Click="Button2_Click">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFD4C6C6"/>
@@ -48,7 +48,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button x:Name="Button3" HorizontalAlignment="Left" Margin="448,0,0,0" VerticalAlignment="Center" Width="125" Height="35" BorderBrush="#FFC29797" Foreground="#FF0F0101" OpacityMask="#FF943F3F" Content="Statistique" FontWeight="Bold" Grid.Column="1" Click="Button3_Click">
+                <Button x:Name="Button3" Margin="0,30,10,25" BorderBrush="#FFC29797" Foreground="#FF0F0101" OpacityMask="#FF943F3F" Content="Statistique" FontWeight="Bold" Grid.Column="1" Click="Button3_Click" HorizontalAlignment="Right" Width="126">
                     <Button.Background>
                         <RadialGradientBrush>
                             <GradientStop Color="#FFC8B2B2" Offset="0.253"/>
@@ -77,8 +77,8 @@
                     </ComboBox.RenderTransform>
                 </ComboBox>
             </StackPanel>
-            <GridSplitter HorizontalAlignment="Center" Height="413" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="6" Background="#FFED1414" Grid.Column="1"/>
-            <Button x:Name="Button4" Grid.Column="2" Content="Modifier" Margin="244,193,244,0" Grid.Row="1" VerticalAlignment="Top" Height="23" Click="Button4_Click" RenderTransformOrigin="-1.173,0.61">
+            <GridSplitter Margin="8,10,0,601" Grid.Row="1" Background="#FFED1414" Grid.Column="1" Width="9" HorizontalAlignment="Left"/>
+            <Button x:Name="Button4" Grid.Column="2" Content="Modifier" Margin="244,0,244,601" Grid.Row="1" Click="Button4_Click" RenderTransformOrigin="-1.173,0.61" Height="23" VerticalAlignment="Bottom">
                 <Button.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFC8B2B2" Offset="0.253"/>
@@ -100,7 +100,7 @@
 
 
 
-            <telerik:RadGridView Name="RadGridView1" Grid.Column="2" Margin="50,19,50,0" Grid.Row="1" VerticalAlignment="Top" Height="169" SelectionChanged="OnRadGridViewSelectionChanged">
+            <telerik:RadGridView Name="RadGridView1" Grid.Column="2" Margin="31,10,50,808" Grid.Row="1" SelectionChanged="OnRadGridViewSelectionChanged">
                 <telerik:RadGridView.Columns>
                     <telerik:GridViewImageColumn DataMemberBinding="{Binding Photo}" Header="Photo" />
                 </telerik:RadGridView.Columns>

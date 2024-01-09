@@ -21,7 +21,6 @@ namespace DotNetProject3
         public ModifStudentWindow(string codeMassar, string firstName, string lastName, string email, string sexe, string adresse, string telephone, string niveau, DateTime naissance, string imagePath)
         {
             InitializeComponent();
-
             // Assurez-vous que vous avez des TextBox dans votre interface utilisateur (XAML) avec les noms appropriés.
             textBox1.Text = codeMassar;
             textBox2.Text = firstName;
@@ -32,9 +31,6 @@ namespace DotNetProject3
             textBox7.Text = email;
             textBox8.Text = telephone;
             textBox9.Text = niveau;
-
-
-
 
         }
 

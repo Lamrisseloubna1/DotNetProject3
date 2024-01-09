@@ -17,7 +17,7 @@
             <RowDefinition Height="280*"/>
         </Grid.RowDefinitions>
         <Grid Margin="88,22,99,0" Background="#FFF0DADA" Height="82" VerticalAlignment="Top">
-            <Button HorizontalAlignment="Left" Margin="39,24,0,24" Width="125" BorderBrush="#FFC29797" Foreground="#FF1C0606" OpacityMask="#FF943F3F" Content="Gestion des Etudiants" FontWeight="Bold" >
+            <Button HorizontalAlignment="Left" Margin="39,24,0,24" Width="125" BorderBrush="#FFC29797" Foreground="#FF1C0606" OpacityMask="#FF943F3F" Content="Gestion des Etudiants" FontWeight="Bold" Click="btn" >
                 <Button.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFC8B2B2" Offset="0.253"/>

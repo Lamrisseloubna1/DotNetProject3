@@ -189,6 +189,11 @@ namespace DotNetProject3
             Chart c = new Chart();
             c.ShowDialog();
         }
+        private void btn(object sender, RoutedEventArgs e)
+        {
+            StudentWindow c = new StudentWindow();
+            c.ShowDialog();
+        }
     }
     }
 
